@@ -2,9 +2,7 @@
 
 
 <div align="center">
-The Repo contains the homework and other practical material from the course ["Zertifizierte/r Agile/r Software-Developer/in (SGD)"] (https://studies.helsinki.fi/courses/cur/otm-dbf5a51d-2121-4110-af0f-f1e8f0b74fb9)
-
-
+The Repo contains the homework and other practical material from the course [Zertifizierte/r Agile/r Software-Developer/in (SGD)] 
 (https://www.sgd.de/kursseite/agiler-software-developer.html?referrer=S_MAS_SK_000001&gclid=CjwKCAiAxvGfBhB-EiwAMPakqmCOUISyxYvQv70TRG9I85lqvqk25CQMjfF7TaGu1T6HKRSxMZe0ZRoCQrIQAvD_BwE
 ) from Jan 2023 - Dec 2023. 
 </div>
