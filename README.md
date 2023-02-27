@@ -1,4 +1,4 @@
-<h1 align="center">Renáta Irinyi - Solutions to the SGD-Software Developer Course (01.2023-12.2023 </h1>
+<h1 align="center">Renáta Irinyi - Solutions to the SGD-Software Developer Course (01.2023-12.2023) </h1>
 
 
 <div align="center">
