@@ -1,12 +1,9 @@
-package EinsendeAufgaben3Lernmonat;
+package LagerVerwaltungOOP;
 
 import javax.swing.*;
 import java.util.Arrays;
 
-public class EinsendeAufgabe01 {
-    /* ######################################################
-    Einsendeaufgabe 4
-    ###################################################### */
+public class Main {
 
     public static void main(String[] args) {
 
@@ -59,45 +56,45 @@ public class EinsendeAufgabe01 {
             //es wird ein indexnr abgefragt => damit ich auf "aussere" Array zugreifen kann
             int i=Integer.parseInt(JOptionPane.showInputDialog(
                     "Bitte geben sie an, welche Kiste Sie ändern möchten!\n" +
-                    "Die Kiste sind von 1-75 nummeriert."))-1;
+                            "Die Kiste sind von 1-75 nummeriert."))-1;
 
             //Das Programm soll nur weiterlaufen, falls ein gesuchte Kiste vorhanden ist (id!=0).
             if(array[i][0]>0){
-            String command=JOptionPane.showInputDialog
-                    ("Bitte geben Sie die gewünschte Aufrag ein!\n" +
-                    "Sie können zwischen den Folgenden Optionen wählen:\n"+
-                    "Bitte tippen Sie die entsprechende Befehl über Ihre Tastatur ein.\n"+
-                    "löschen =>Löschen der Kiste\n" +
-                    "ändern => Ändern der Kiste\n"+
-                    "anzeigen => Anzeigen der Daten\n"+
-                    "auslisten => Auslisten alle vorhandenen Kiste\n"+
-                    "beenden => Beenden der Programm");
+                String command=JOptionPane.showInputDialog
+                        ("Bitte geben Sie die gewünschte Aufrag ein!\n" +
+                                "Sie können zwischen den Folgenden Optionen wählen:\n"+
+                                "Bitte tippen Sie die entsprechende Befehl über Ihre Tastatur ein.\n"+
+                                "löschen =>Löschen der Kiste\n" +
+                                "ändern => Ändern der Kiste\n"+
+                                "anzeigen => Anzeigen der Daten\n"+
+                                "auslisten => Auslisten alle vorhandenen Kiste\n"+
+                                "beenden => Beenden der Programm");
 
-            if(command.contains("löschen")){
-                System.out.println("-".repeat(15));
+                if(command.contains("löschen")){
+                    System.out.println("-".repeat(15));
 
-                clearStorageBox(i, array);
-                System.out.println(Arrays.deepToString(array));
-            }
-            if(command.contains("ändern")){
-                System.out.println("-".repeat(15));
+                    clearStorageBox(i, array);
+                    System.out.println(Arrays.deepToString(array));
+                }
+                if(command.contains("ändern")){
+                    System.out.println("-".repeat(15));
 
-                modifyStorageBox(i, array);
-                System.out.println(Arrays.deepToString(array));
-            }
-            if(command.contains("anzeigen")){
-                System.out.println("-".repeat(15));
+                    modifyStorageBox(i, array);
+                    System.out.println(Arrays.deepToString(array));
+                }
+                if(command.contains("anzeigen")){
+                    System.out.println("-".repeat(15));
 
-                showStorageBox(i, array);
-            }
-            if(command.contains("auslisten")){
-                System.out.println("-".repeat(15));
+                    showStorageBox(i, array);
+                }
+                if(command.contains("auslisten")){
+                    System.out.println("-".repeat(15));
 
-                listAllStorageBoxes(array);
-            }
-            if(command.contains("beenden")){
-                break;
-            }
+                    listAllStorageBoxes(array);
+                }
+                if(command.contains("beenden")){
+                    break;
+                }
             } else {
                 //falls eine Kiste nicht existiert (id==0)
                 System.out.println("-".repeat(15));
@@ -128,10 +125,10 @@ public class EinsendeAufgabe01 {
         array[i][3]=height;
     }
     private static void showStorageBox(int i, int[][] array){
-            System.out.printf("Breite der Kiste ist= %20s%n" +
-                    "Länge der Kiste ist= %20s%n" +
-                    "Höhe der Kiste ist= %20s%n",
-                    array[i][1],array[i][2],array[i][3]);
+        System.out.printf("Breite der Kiste ist= %20s%n" +
+                        "Länge der Kiste ist= %20s%n" +
+                        "Höhe der Kiste ist= %20s%n",
+                array[i][1],array[i][2],array[i][3]);
 
     }
 
@@ -139,33 +136,24 @@ public class EinsendeAufgabe01 {
     //ausgelistet werden können.
     private static void listAllStorageBoxes( int[][] array){
 
-          for(int i=0; i<array.length; i++){
-              //es war noch wichtig dass nur die Kiste ausgelistet werden, die wirklich besetzt sind
-              // (haben ein ID nr)
-              if(array[i][0]!=0){
-                  System.out.printf("Daten der %s. Kiste: \n"
-                          ,array[i][0]);
-                  System.out.println("-".repeat(15));
-                  System.out.printf(
-                          "Breite der Kiste ist=%20s%n"+
-                                  "Länge der Kiste ist=%20s%n"+
-                                  "Höhe der Kiste ist=%20s%n",
-                          array[i][1],array[i][2],array[i][3]);
-                  System.out.println("-".repeat(15));
-              }
+        for(int i=0; i<array.length; i++){
+            //es war noch wichtig dass nur die Kiste ausgelistet werden, die wirklich besetzt sind
+            // (haben ein ID nr)
+            if(array[i][0]!=0){
+                System.out.printf("Daten der %s. Kiste: \n"
+                        ,array[i][0]);
+                System.out.println("-".repeat(15));
+                System.out.printf(
+                        "Breite der Kiste ist=%20s%n"+
+                                "Länge der Kiste ist=%20s%n"+
+                                "Höhe der Kiste ist=%20s%n",
+                        array[i][1],array[i][2],array[i][3]);
+                System.out.println("-".repeat(15));
+            }
 
-          }
+        }
+
+    }
+
 
 }
-
-
-}
-
-
-
-
-
-
-
-
-
