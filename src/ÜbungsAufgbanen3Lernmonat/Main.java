@@ -48,6 +48,7 @@ public class Main {
 */
 
         //Einfache Verkettung
+        /*
         Listenelement4 listenAnfang = new Listenelement4();
         System.out.println("Das ist der listenanfang");
         System.out.println(listenAnfang.toString());
@@ -61,6 +62,10 @@ public class Main {
         }
 
         EinfachVerketteteListe4.listeAusgeben(listenAnfang);
+*/
+
+
+
 
     }
 }
