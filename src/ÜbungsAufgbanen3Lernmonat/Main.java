@@ -64,8 +64,8 @@ public class Main {
         EinfachVerketteteListe4.listeAusgeben(listenAnfang);
 */
 
-
-
+        Clock tik=new Clock();
+        tik.tack();
 
     }
 }

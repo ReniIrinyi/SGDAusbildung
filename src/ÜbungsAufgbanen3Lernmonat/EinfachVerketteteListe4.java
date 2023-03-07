@@ -7,14 +7,6 @@ class Listenelement4 {
     int daten;
     Listenelement4 naechster;
 
-    @Override
-    public String toString() {
-        return "Listenelement {" +
-
-                "Element='" + daten + '\'' +
-                ", naechster=" + naechster +
-                '}';
-    }
 }
 
 public class EinfachVerketteteListe4 {
@@ -31,7 +23,7 @@ public class EinfachVerketteteListe4 {
         Listenelement4 hilfsKonstruktion;
         hilfsKonstruktion = listenAnfang;
         System.out.println("listen Anhängen, Hilfskonstruktion: " +hilfsKonstruktion);
-        while (hilfsKonstruktion.naechster != null)
+        while (hilfsKonstruktion.naechster != null) //=> wird duch funktion anhängen if-else übernommen
             hilfsKonstruktion = hilfsKonstruktion.naechster;
         setDaten(name, datenNeu, hilfsKonstruktion);
     }

@@ -11,9 +11,9 @@ public class EinsendeAufgabe03 {
         System.out.print("-".repeat(25));
         System.out.print(" AM ENDE DER LISTE HINZUFÜGEN ");
         System.out.println("-".repeat(25));
-        for(int element=1; element<=20; element++){
+        for(int element=1; element<=5; element++){
+            System.out.print("Nachdem wir "+element+" hinzugefügt haben dann wurde: ");
             listenAnfang.addEnde(element);
-            System.out.println("Nachdem wir "+element+" hinzugefügt haben dann wurde: ");
             listenAnfang.ausgeben();
         }
 
@@ -24,17 +24,19 @@ public class EinsendeAufgabe03 {
 //die Klasse für die Listenelemente mit Methoden
 class Listenelement2 {
     int daten;
-    Listenelement2 next;
-
+    //ich werde jeweils das startpunkt(head) und auch das endpunkt(tail) initalizieren.
+     Listenelement2 next;
+     Listenelement2 head; //Listenanfang
+     Listenelement2 tail; //Listenende
+    Listenelement2 current; //Listenende
     //constructor
      Listenelement2(int daten) {
         this.daten = daten;
-        this.next = null;
     }
 
-    //ich werde jeweils das startpunkt(head) und auch das endpunkt(tail) initalizieren.
-    private Listenelement2 head; //Listenanfang
-    private Listenelement2 tail; //Listenende
+    public void setDaten(int daten) {
+        this.daten = daten;
+    }
 
     //Methode zum Anhängen ein neue Element am ENDE
     void addEnde(int daten){
@@ -42,28 +44,39 @@ class Listenelement2 {
         // es ist der erste und der letzte element
         if(head==null){
             head=new Listenelement2(daten);
+            head.setDaten(daten);
             tail= head;
             return;
         }
-        //Wenn elemente da sind, wir insert ein neue element am ENDE der Liste.
+        //Wenn elemente da sind, wir fügen ein neues element am ENDE der Liste ein.
         //wir müssen also eine neue Listenelement machen und von diesem neue ELement
-        //als Ende festelegen.
-        Listenelement2 neueElementEnde=new Listenelement2(daten);
-        tail.next=neueElementEnde;
-        tail=neueElementEnde;
+        //als Ende festelegen => mit addEnde -method
+        //Listenelement2 neueElementEnde=new Listenelement2(daten);
+        tail.addEnde(daten);
+        //tail.next=neueElementEnde;
+       // tail=neueElementEnde;
     }
 
     //die Methode zur Ausgabe der Liste
     void ausgeben() {
         //zuerst lege ich eine current Element fest (Listenanfang=>head)
-        Listenelement2 current=head;
-        while (current != null){
+        //Listenelement2 current=head;
+        current=head;
+        //while (current != null){
+        if(current!=null) {
             System.out.print(current.daten+" => ");
-            //das nächste Element ausgeben
-            current=current.next;
+            current.ausgeben();
+
+        }else {
+          head=current;
+            System.out.println(" ENDE ");
         }
-        System.out.print("NULL");
-        System.out.println();
-    }
+
+          //  System.out.print(current.daten+" => ");
+            //das nächste Element ausgeben
+           // current=current.next;
+
+        }
+
 
 }
