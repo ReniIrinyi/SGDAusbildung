@@ -3,7 +3,7 @@ package EinsendeAufgaben3Lernmonat;
 public class Main {
     public static void main(String[] args) {
 
-        Listenelement2 listenAnfang = new Listenelement2(0);
+        Listenelement2 listenAnfang = new Listenelement2();
 
         System.out.print("-".repeat(25));
         System.out.print(" AM ENDE DER LISTE HINZUFÜGEN RECURSIVE METHODE ");
@@ -16,7 +16,7 @@ public class Main {
         System.out.println();
 
 
-        Listenelement listenRückwärts = new Listenelement(0);
+        Listenelement listenRückwärts = new Listenelement();
 
         System.out.print("-".repeat(25));
         System.out.print(" AM ANFANG DER LISTE HINZUFÜGEN + Rückwärts ausgeben RECURSIVE METHODE ");
